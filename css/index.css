@@ -1,0 +1,266 @@
+*{
+    margin:0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+p a{
+    display: inline;
+}
+img , svg {
+    display: block;
+    width: 100%;
+    height: inherit;
+}
+svg{
+    fill: currentColor;
+}
+:root{
+    font-size: 100%;
+    scroll-behavior: smooth;
+   --fondo: rgb(82, 74, 49);
+   --principal: rgb(204, 154, 3);
+   --claro:rgb(131, 116, 73);
+   --blanco:rgb(255, 255, 255);
+   --negro:rgb(22, 22, 22);
+   --plateado:rgb(204, 204, 204);
+   font-family: "Grenze", serif;
+
+
+}
+body{
+    hyphens: none ;
+    position: relative;
+}
+h1 , h2 , h3 , h4 , h5 , h6{
+    font-size: inherit;
+    font-weight: inherit;
+}
+.Header{
+    width: 100%;
+    background-color: var(--principal);
+    padding: 10px 20px;
+}
+.Header-wrap{
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.Header-nav{
+    width: 50%;
+}
+.Header-ul{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.Header-a{
+    padding: 10px;
+    color: var(--negro);
+    font-size: 1.2rem;
+    transition: background-color .3s ease;
+}
+.Header-a:hover{
+    background-color: var(--plateado);
+}
+.Header-boton{
+    display: none;
+}
+.Main{
+    width: 100%;
+}
+.Hero{
+    width: 100%;
+    min-height: 500px;
+    position: relative;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.Hero-fondo{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+.Hero-img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    filter: opacity(0.5);
+}
+.Hero-info{
+    width: 90%;
+    max-width: 700px;
+    padding: 20px;
+    
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.Hero-h2{
+    font-weight: 600;
+    font-size: 3rem;
+    color: var(--negro);
+}
+.Hero-svg{
+    color: var(--negro);
+    max-width: 400px;
+}
+.Hero-a{
+    background-color: var(--negro);
+    color: var(--principal);
+    font-size: 1.2rem;
+    padding: 15px;
+    border: 2px solid var(--principal);
+    transition: background-color .3s ease, color .3s ease;
+}
+.Hero-a:hover{
+    background-color: var(--principal);
+    color: var(--negro);
+}
+.Mapas{
+    width: 100%;
+    background-color: var(--fondo);
+    color: var(--blanco);
+
+    padding: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.Mapas-h3{
+    font-size: 2rem;
+    color: var(--principal);
+}
+.Carrousel{
+    width: 90%;
+    max-width: 800px;
+    min-height: 520px;
+    background: radial-gradient(circle, var(--claro) 00%, var(--fondo) 70%);
+    
+    margin: 20px auto;
+
+    position: relative;
+    box-shadow: inset 2px 2px 30px 20px var(--fondo);
+}
+.Carrousel-container{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.Carrousel-slide{
+    width: calc( 100% * 3);
+    min-height: 500px;
+    backdrop-filter: blur(10%);
+    display: grid;
+    grid-template-columns: repeat( 3 , 1fr );
+    transition: all .5s ease;
+}
+.Carrousel-articulo{
+    height: 100%;
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+.Articulo-img{
+    overflow: hidden;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    object-fit: contain;
+}
+.Articulo-wrap{
+    padding: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: start;
+    gap: 40px;
+    grid-row: 1 / 3;
+}
+.Articulo-h4{
+    color: var(--plateado);
+    font-size: 2rem;
+    font-weight: 500;
+}
+.Articulo-p{
+    font-weight: 300;
+    font-size: 1.3rem;
+}
+.Articulo-precio{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1/3;
+    grid-row: 3/4;
+}
+.Articulo-span{
+    font-weight: 400;
+    font-size: 1.8rem;
+}
+.Flecha-arrow{
+    border-radius: 10px;
+    background-color: transparent;
+    color: var(--plateado);
+    width: 48px;
+    height: 48px;
+    transition: all .5s ease;
+    opacity: 1;
+
+    position: absolute;
+    bottom: 50px;
+}
+.Next{ 
+    right: -50px; 
+}
+.Prev{ 
+    left: -50px; 
+}
+.Carrousel-ul{
+    
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+    padding: 10px 0px;
+
+}
+.Carrousel-point{
+    width: 10px;
+    height: 10px;
+    background-color: var(--claro);
+    border-radius: 25%;
+}
+.Activo{
+    background-color: var(--plateado);
+}
+.Footer{
+    width: 100%;
+
+    background-color: var(--negro);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--plateado);
+}

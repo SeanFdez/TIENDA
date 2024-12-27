@@ -1,0 +1,613 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+p a {
+    display: inline;
+}
+
+img,
+svg {
+    display: block;
+    width: 100%;
+    height: inherit;
+}
+
+svg {
+    fill: currentColor;
+}
+
+:root {
+    font-size: 100%;
+    scroll-behavior: smooth;
+    --fondo: rgb(82, 74, 49);
+    --principal: rgb(204, 154, 3);
+    --claro: rgb(131, 116, 73);
+    --blanco: rgb(255, 255, 255);
+    --negro: rgb(22, 22, 22);
+    --plateado: rgb(204, 204, 204);
+    font-family: "Grenze", serif;
+
+
+}
+
+body {
+    hyphens: none;
+    position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+form,
+input,
+textarea,
+label,
+select,
+button {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: transparent;
+    display: block;
+}
+
+.Header {
+    width: 100%;
+    background-color: var(--principal);
+    padding: 10px 20px;
+    position: relative;
+}
+
+.Header-wrap {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Header-nav {
+    width: 50%;
+}
+
+.Header-ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Header-a {
+    padding: 10px;
+    color: var(--negro);
+    font-size: 1.2rem;
+    transition: background-color .3s ease;
+}
+
+.Header-a:hover {
+    background-color: var(--plateado);
+}
+
+.Header-boton {
+    display: none;
+}
+
+.Header-ul--boton{
+    display: none;
+}
+.Main {
+    width: 100%;
+}
+
+.Cesta {
+    width: 50%;
+    max-width: 200px;
+    height: 60px;
+    background-color: var(--plateado);
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    bottom: -60px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 1;
+}
+
+.Cesta-button {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.Cesta-span {
+    font-size: 1.2rem;
+}
+
+.Cesta-svg {
+    width: 20px;
+}
+
+.Cesta-items {
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    background-color: var(--principal);
+    border-radius: 10px;
+}
+
+.Cesta-wrap {
+    width: 80%;
+
+    min-height: 500px;
+    background-color: var(--plateado);
+    padding: 15px;
+    position: fixed;
+    top: calc(50% - (500px / 2));
+    left:calc(10%);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: start;
+    align-items: start;
+    gap: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-950px);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.Cesta-wrap.Activo {
+    transform: translateY(0px);
+    opacity: 1;
+    pointer-events: all;
+}
+
+.Cesta-cerrar {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.Cesta-ul {
+    width: 100%;
+    min-height: 400px;
+    max-height: 500px;
+    overflow-y: scroll;
+    padding: 10px;
+    flex-flow: row wrap;
+    justify-content: start;
+    align-items: start;
+
+}
+
+.Cesta-ul::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+.Cesta-ul::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+.Cesta-ul::-webkit-scrollbar-thumb {
+    background: var(--claro);
+    border-radius: 10px;
+}
+
+.Cesta-ul::-webkit-scrollbar-thumb:hover {
+    background: var(--fondo);
+}
+
+.Cesta-li {
+    padding: 5px 15px;
+    width: 100%;
+    min-height: 30px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    position: relative;
+    border-bottom: 3px solid var(--claro);
+}
+
+.Cesta-nombre {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.Cesta-precio {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--claro);
+}
+
+.Cesta-total {
+    padding: 0px 30px;
+    width: 100%;
+    min-height: 60px;
+    background-color: var(--principal);
+    border: 3px solid var(--claro);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.Cesta-borrar {
+    width: 80px;
+    height: 30px;
+    background-color: var(--principal);
+    border: 3px solid var(--claro);
+    position: absolute;
+    top: calc(50% - 15px);
+    left: calc(50% - 40px);
+
+}
+
+.Total-nombre {
+    text-transform: uppercase;
+    color: var(--blanco);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.Total-precio {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--negro);
+}
+
+.Cesta-svg--cerrar {
+    width: 40px;
+}
+
+.Main {
+    width: 100%;
+    min-height: 1000px;
+    background-color: var(--fondo);
+    color: var(--blanco);
+    position: relative;
+}
+
+.Mapas {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: start;
+    gap: 10px;
+}
+
+.Main-h2 {
+    width: 60%;
+    padding: 0px 25px;
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+.Main-p {
+    padding: 0px 25px;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.Filtro {
+    width: 50%;
+    max-width: 200px;
+    padding: 20px 15px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+    background-color: var(--claro);
+    border: 3px solid var(--principal);
+    border-radius: 15px;
+}
+
+.Filtro-legend {
+    font-size: 1.2rem;
+    
+}
+
+.Filtro-wrap {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: start;
+
+}
+
+.Articulo {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 400px;
+    gap: 10px;
+}
+
+.Articulo-wrap {
+    padding: 15px;
+    background-color: var(--claro);
+    border: 3px solid var(--principal);
+    border-radius: 15px;
+    display: none;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.Articulo-img {
+    max-width: 200px;
+    border: 3px solid var(--principal);
+    border-radius: 15px;
+}
+
+.Articulo-h3 {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.Articulo-span {
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.Articulo-button {
+    padding: 10px;
+    border: 3px solid var(--principal);
+    border-radius: 15px;
+    background-color: var(--plateado);
+    color: var(--negro);
+}
+.Lightbox{
+    position: fixed;
+    background-color: var(--fondo);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    padding: 40px;
+
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    
+    opacity: 0;
+    pointer-events: none;
+    
+    transition: all .5s ease;
+}
+.Lightbox.Activo{
+    opacity: 1;
+    pointer-events: all;
+}
+.Lightbox-button{
+    background-color: transparent;
+    width: 40px;
+    color: var(--principal);
+}
+.Lightbox-wrap{
+    border: 5px solid var(--principal);
+    background-color: blue;
+    border-radius: 25px;
+    overflow: hidden;
+}
+.Lightbox-img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.Footer {
+    width: 100%;
+    background-color: var(--negro);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--plateado);
+}
+@media (max-width:480px){
+
+    .Header{
+        min-height: 60px;
+    }
+    .Header-wrap{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+
+    .Header-boton{
+        display: block;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: calc(50% - 25px);
+        right: 10px;
+    }
+    .Boton-ul{
+        background-color: rgba(0, 0, 0, 0.614);
+        color: white;
+        width: 90px;
+        height: 0px;
+        position: absolute;
+        top: 55px;
+        left: -30px;
+        z-index: 2;
+        overflow: hidden;
+
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+
+        transition: all .5s ease;
+
+    }
+    .Boton-ul.Activo{
+        height: 200px;
+    }
+    .Boton-li{
+        width: 100%;
+        height: calc(210px / 4);
+        text-align: center;
+
+    }
+    .Boton-a{
+        width: 100%;
+        height: 100%;
+        padding: 5px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        transition: background-color .5s ease;
+    }
+    .Boton-a:hover{
+        background-color: var(--plateado);
+        color: var(--negro);
+    }
+    .Header-nav{
+        display: none;
+    }
+
+    .Main-h2{
+        width: 100%;
+    }
+    .Cesta {
+        background-color: var(--principal);
+        width: 90px;
+        left: 10px;
+        bottom: 0;
+        z-index: 1;
+    }
+    .Cesta-items {
+        background-color: var(--plateado);
+    }
+    .Cesta-button {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    
+    .Cesta-span {
+        display: none;
+    }
+    
+    .Cesta-svg {
+        width: 30px;
+    }
+    .Cesta-wrap{
+        width: 90%;
+        top: calc(50% - (500px / 2));
+        left:calc(5%);
+        padding: 10px;
+    }
+    .Cesta-ul{
+        width: 100%;
+    }
+    .Cesta-li {
+        padding: 5px 15px;
+        width: 100%;
+        min-height: 30px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-items: center;
+        gap: 20px;
+        position: relative;
+        border-bottom: 3px solid var(--claro);
+    }
+    .Cesta-nombre{
+        font-size: 1.2rem;
+    }
+    .Cesta-precio{
+        font-size: 1.6rem;
+    }
+    
+    .Cesta-borrar {
+        padding: 2px;
+        background-color: var(--principal);
+        border: 3px solid var(--claro);
+        position: static;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .Mapas{
+        width: 100%;
+        flex-flow: row wrap;
+        align-content: center;
+
+    }
+    .Filtro {
+        width: 100%;
+        max-width: 400px;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .Filtro-legend{
+        width: 100%;
+    }
+    .Filtro-wrap{
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .Articulo{
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-rows: 400px;
+        gap: 10px;
+    }
+    .Lightbox{
+        padding: 10px;
+    }
+}
