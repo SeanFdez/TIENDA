@@ -6,7 +6,12 @@ const carrousel          = document.querySelector(`.Carrousel-slide`)
 const articulo           = document.querySelectorAll(`.Articulo`)
 const punto              = document.querySelectorAll(`.Carrousel-point`)
 const flecha             = document.querySelectorAll(`.Carrousel-arrow`)
+const botonMenu          =document.querySelector(`.Header-svg`)
+const menu               =document.querySelector(`.Boton-ul`)
 
+botonMenu.addEventListener(`click`, ()=>{
+    menu.classList.toggle(`Activo`)
+})
 //Variables
 
 let art = 0

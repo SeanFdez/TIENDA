@@ -443,35 +443,35 @@ button {
 @media (max-width:480px){
 
     .Header{
-        min-height: 60px;
+        min-height: 50px;
     }
     .Header-wrap{
         display: flex;
-        flex-flow: row nowrap;
-        justify-content: center;
+        flex-flow: row-reverse nowrap;
+        justify-content: space-between;
         align-items: center;
-
-
     }
-
     .Header-boton{
         display: block;
         width: 50px;
         height: 50px;
+    }
+    .Header-h1{
+        width: 150px;
         position: absolute;
-        top: calc(50% - 25px);
-        right: 10px;
+        left: calc(50% - 80px);
     }
     .Boton-ul{
-        background-color: rgba(0, 0, 0, 0.614);
-        color: white;
+        background-color: var(--principal);
+        color: var(--negro);
         width: 90px;
         height: 0px;
         position: absolute;
-        top: 55px;
-        left: -30px;
+        top: 76px;
+        right:  0px;
         z-index: 2;
         overflow: hidden;
+
 
         display: flex;
         flex-flow: column nowrap;
@@ -513,6 +513,7 @@ button {
     }
     .Cesta {
         background-color: var(--principal);
+        position: static;
         width: 90px;
         left: 10px;
         bottom: 0;
@@ -556,7 +557,6 @@ button {
         flex-flow: row nowrap;
         justify-content: space-around;
         align-items: center;
-        gap: 20px;
         position: relative;
         border-bottom: 3px solid var(--claro);
     }
@@ -564,7 +564,7 @@ button {
         font-size: 1.2rem;
     }
     .Cesta-precio{
-        font-size: 1.6rem;
+        font-size: 1.3rem;
     }
     
     .Cesta-borrar {
@@ -585,7 +585,7 @@ button {
     }
     .Filtro {
         width: 100%;
-        max-width: 400px;
+        max-width: 480px;
         flex-flow: row nowrap;
         justify-content: space-between;
         align-items: center;
