@@ -67,7 +67,9 @@ h1 , h2 , h3 , h4 , h5 , h6{
     width: 80%;
     max-width: 31.25rem;
 }
-
+.Header-h1{
+    max-width: 120px;
+}
 .Header-ul {
     display: flex;
     flex-flow: row nowrap;

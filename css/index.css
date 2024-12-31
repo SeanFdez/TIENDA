@@ -75,7 +75,9 @@ h6 {
     align-items: center;
     position: relative;
 }
-
+.Header-h1{
+    max-width: 120px;
+}
 .Header-nav {
     width: 80%;
     max-width: 500px;

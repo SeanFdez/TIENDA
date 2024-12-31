@@ -87,7 +87,9 @@ button {
     justify-content: space-between;
     align-items: center;
 }
-
+.Header-h1{
+    max-width: 120px;
+}
 .Header-nav {
     width: 80%;
     max-width: 500px;
@@ -345,8 +347,8 @@ button {
 }
 
 .Main-h2 {
-    width: 60%;
-    padding: 0px 25px;
+    width: 70%;
+    padding: 20px 25px;
     font-weight: 600;
     font-size: 3rem;
 }
@@ -568,7 +570,9 @@ button {
         width: 100%;
     }
     .Cesta {
-        background-color: var(--principal);
+        background-color: transparent;
+        border-radius: 0px;
+        border: 0px;
         position: static;
         width: 90px;
         left: 10px;
