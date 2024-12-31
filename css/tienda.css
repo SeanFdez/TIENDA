@@ -74,8 +74,9 @@ button {
 .Header {
     width: 100%;
     background-color: var(--principal);
-    padding: 0px 20px;
-    position: relative;
+    background-image: url('/TIENDA/assets/texturamadera.png');
+    background-blend-mode: soft-light;
+    padding: 0rem 1.25rem;
 }
 
 .Header-wrap {

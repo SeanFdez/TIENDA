@@ -48,8 +48,10 @@ h1 , h2 , h3 , h4 , h5 , h6{
 .Header {
     width: 100%;
     background-color: var(--principal);
-    padding: 0rem 1.25rem;
+    background-image: url('/TIENDA/assets/texturamadera.png');
 
+    background-blend-mode: soft-light;
+    padding: 0rem 1.25rem;
 }
 
 .Header-wrap {
