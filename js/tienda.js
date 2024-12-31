@@ -3,8 +3,6 @@
 const botonMenu =document.querySelector(`.Header-svg`)
 const menu  =document.querySelector(`.Boton-ul`)
 
-console.log(botonMenu)
-console.log (menu)
 botonMenu.addEventListener(`click`, ()=>{
     menu.classList.toggle(`Activo`)
 })
@@ -127,11 +125,11 @@ mapas.forEach(mapa => {                                                       //
       
 
 
-      const botonCesta = document.createElement(`button`)                           //Creamos el boton de añadir a la cesta y le damos clase y texto
-            botonCesta.classList.add(`Articulo-button`)
-            botonCesta.textContent = (`Añadir a la cesta`)
+      const anadirCesta = document.createElement(`button`)                           //Creamos el boton de añadir a la cesta y le damos clase y texto
+            anadirCesta.classList.add(`Articulo-button`)
+            anadirCesta.textContent = (`Añadir a la cesta`)
 
-            botonCesta.addEventListener(`click`, ()=>{                              //Cada vez que pulsemos el boton
+            anadirCesta.addEventListener(`click`, ()=>{                              //Cada vez que pulsemos el boton
                   
                   cesta.push(mapa)                                                  //Insertamos un objeto Mapa en la cesta vacia
                   
@@ -157,12 +155,12 @@ mapas.forEach(mapa => {                                                       //
                    
                   precio.innerHTML = `${total}€` 
                   
-                  const borrar = document.createElement(`button`)                   //Creamos el boton de borrar de la cesta 
-                        borrar.classList.add(`Cesta-borrar`)                              
-                        borrar.textContent = (`Eliminar`)
-                        cestaLi.appendChild(borrar)
+                  const borrarCesta = document.createElement(`button`)                   //Creamos el boton de borrar de la cesta 
+                        borrarCesta.classList.add(`Cesta-borrar`)                              
+                        borrarCesta.textContent = (`Eliminar`)
+                        cestaLi.appendChild(borrarCesta)
 
-                        borrar.addEventListener('click', () => {                   //Cada vez que lo pulsamos                        
+                        borrarCesta.addEventListener('click', () => {                   //Cada vez que lo pulsamos                        
                               cesta.forEach(eachCesta=>{
                                     if (cestaName.innerHTML===eachCesta.nombre){
                                           cestaLi.remove()                          //Eliminamos el objeto de la cesta
@@ -178,7 +176,7 @@ mapas.forEach(mapa => {                                                       //
                         })
             })
 
-      producto.appendChild(botonCesta) 
+      producto.appendChild(anadirCesta) 
       articulo.appendChild(producto)                                                //Unimos todo
       
 })

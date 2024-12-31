@@ -1,0 +1,284 @@
+*{
+    margin:0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
+}
+a{
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+p a{
+    display: inline;
+}
+img , svg {
+    display: block;
+    width: 100%;
+    height: inherit;
+}
+svg{
+    fill: currentColor;
+}
+:root{
+    font-size: 100%;
+    scroll-behavior: smooth;
+   --fondo: rgb(82, 74, 49);
+   --principal: rgb(204, 154, 3);
+   --claro:rgb(131, 116, 73);
+   --blanco:rgb(255, 255, 255);
+   --negro:rgb(22, 22, 22);
+   --plateado:rgb(204, 204, 204);
+   font-family: "Grenze", serif;
+
+
+}
+body{
+    hyphens: none ;
+    position: relative;
+
+}
+h1 , h2 , h3 , h4 , h5 , h6{
+    font-size: inherit;
+    font-weight: inherit;
+}
+.Header {
+    width: 100%;
+    background-color: var(--principal);
+    padding: 0rem 1.25rem;
+
+}
+
+.Header-wrap {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.Header-nav {
+    width: 80%;
+    max-width: 31.25rem;
+}
+
+.Header-ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Header-a {
+    padding: .625rem;
+    color: var(--negro);
+    font-size: 19.2px;
+    transition: background-color .3s ease;
+}
+
+.Header-a:hover {
+    background-color: var(--plateado);
+}
+
+.Header-boton {
+    display: none;
+}
+
+.Header-ul--boton{
+    display: none;
+}
+.Main{
+    width: 100%;
+    color: var(--blanco);
+    position: relative;
+}
+.Fondo{
+    width: 100%;
+    height: 100%;
+    background-color: var(--fondo);
+
+    position: absolute;
+    pointer-events: none;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+
+}
+.Fondo-svg{
+    width: 100%;
+    max-width: 43.75rem;
+    
+    color: var(--claro);
+    opacity: 0.3;
+    filter: blur(.0625rem);
+}
+.Main-section{
+    width: 90%;
+    min-height: 50vh;
+    margin: auto;
+    padding: 1.25rem;
+}
+.Main-h2{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    font-weight: 600;
+    font-size: 3rem;
+}
+.Main-p{
+    text-align: start;
+    margin: .625rem 0rem;
+    font-size: 1.3rem;
+}
+.Main-li{
+    margin: .625rem 1.25rem;
+    list-style: circle;
+    text-decoration: underline;
+    text-decoration-color: var(--principal);
+    text-underline-offset: .3125rem;
+    font-size: 1.1rem;
+}
+.Main-h3{
+    width: 100%;
+    max-width: 25rem;
+    margin: auto;
+    text-align: center;
+    font-weight: 600;
+    font-size: 2rem;
+    color: var(--principal);
+}
+.Acordeon-pregunta{
+    margin: 1.25rem 0px;
+}
+.Acordeon-h4{
+    padding: 10px;
+    margin: .625rem 0rem;
+    font-size: 1.6rem;
+    text-align: center;
+    background-color: var(--claro);
+    border: .1875rem solid var(--principal);
+    border-radius: 1.5625rem;
+
+}
+.Acordeon-p{
+    text-align: center;
+    margin: .625rem 1.25rem;
+    font-size: 1.3rem;
+    height: 0rem;
+    overflow: hidden;
+
+    transition: height .5s ease;
+}
+.Acordeon-p.Activo{
+    height: 5rem;
+}
+
+.Footer{
+    width: 100%;
+    background-color: var(--negro);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--plateado);
+}
+@media(max-width:48rem){
+    .Main-h2{
+        width: 100%;
+        font-weight: 600;
+        font-size: 2.2rem;
+    }
+    .Main-section{
+        width: 90%;
+        margin: auto;
+    }
+}
+@media (max-width:37.5rem){
+
+    .Header{
+        min-height: 3.125rem;
+    }
+    .Header-wrap{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .Header-boton{
+        display: block;
+        width: 3.125rem;
+        height: 3.125rem;
+    }
+    .Header-h1{
+        width: 9.375rem;
+    }
+    .Header-a{
+        width: 100%;
+    }
+    .Boton-ul{
+        background-color: var(--principal);
+        color: var(--negro);
+        width: 5.625rem;
+        height: 0rem;
+        position: absolute;
+        top: 3.125rem;
+        right: -1.25rem;
+        z-index: 2;
+        overflow: hidden;
+
+
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+
+        transition: all .5s ease;
+
+    }
+    .Boton-ul.Activo{
+        height: 12.5rem;
+    }
+    .Boton-li{
+        width: 100%;
+        height: calc(13.125rem / 4);
+        text-align: center;
+
+    }
+    .Boton-a{
+        width: 100%;
+        height: 100%;
+        padding: .3125rem;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        transition: background-color .5s ease;
+    }
+    .Boton-a:hover{
+        background-color: var(--plateado);
+        color: var(--negro);
+    }
+    .Header-nav{
+        display: none;
+    }
+    .Main-section{
+        width: 100%;
+    }
+    .Acordeon-p.Activo{
+        height: 10rem;
+    }
+    .Acordeon-pregunta{
+        margin: 10px 0px;
+    }
+    .Acordeon-h4{
+        margin: 10px 0rem;
+        font-size: 1.4rem;
+    }
+}
