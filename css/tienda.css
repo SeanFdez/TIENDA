@@ -517,7 +517,7 @@ button {
     .Header-h1{
         width: 150px;
         position: absolute;
-        left: calc(50% - 80px);
+        left: calc(50% - 50px);
     }
     .Boton-ul{
         background-color: var(--principal);
