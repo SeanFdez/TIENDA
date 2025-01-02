@@ -45,6 +45,17 @@ h1 , h2 , h3 , h4 , h5 , h6{
     font-size: inherit;
     font-weight: inherit;
 }
+form,
+input,
+textarea,
+label,
+select,
+button {
+    font-family: inherit;
+    font-size: inherit;
+    background-color: transparent;
+    display: block;
+}
 .Header {
     width: 100%;
     background-color: var(--principal);
@@ -99,6 +110,7 @@ h1 , h2 , h3 , h4 , h5 , h6{
     width: 100%;
     color: var(--blanco);
     position: relative;
+    min-height: 100vh;
 }
 .Fondo{
     width: 100%;
@@ -125,7 +137,6 @@ h1 , h2 , h3 , h4 , h5 , h6{
 }
 .Main-section{
     width: 90%;
-    min-height: 50vh;
     margin: auto;
     padding: 1.25rem;
 }
@@ -141,49 +152,80 @@ h1 , h2 , h3 , h4 , h5 , h6{
     margin: .625rem 0rem;
     font-size: 1.3rem;
 }
-.Main-li{
-    margin: .625rem 1.25rem;
-    list-style: circle;
-    text-decoration: underline;
-    text-decoration-color: var(--principal);
-    text-underline-offset: .3125rem;
-    font-size: 1.1rem;
-}
 .Main-h3{
-    width: 100%;
-    max-width: 25rem;
     margin: auto;
     text-align: center;
     font-weight: 600;
     font-size: 2rem;
     color: var(--principal);
 }
-.Acordeon-pregunta{
-    margin: 1.25rem 0px;
-}
-.Acordeon-h4{
-    padding: 10px;
-    margin: .625rem 0rem;
-    font-size: 1.6rem;
-    text-align: center;
+.Main-form{
+    width: 90%;
+    max-width: 600px;
+    min-height: 500px;
+    margin: 20px auto;
     background-color: var(--claro);
-    border: .1875rem solid var(--principal);
-    border-radius: 1.5625rem;
-
+    background-color: var(--claro);
+    border: 3px solid var(--principal);
+    border-radius: 15px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
 }
-.Acordeon-p{
-    text-align: center;
-    margin: .625rem 1.25rem;
-    font-size: 1.3rem;
-    height: 0rem;
-    overflow: hidden;
-
-    transition: height .5s ease;
+.Formulario-fieldset{
+    width: 90%;
+    padding: 15px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
 }
-.Acordeon-p.Activo{
-    height: 5rem;
+.Formulario-label{
+    font-size: 1.2rem;
 }
+.Formulario-legend{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.Formulario-input{
+    width: 60%;
+    border: 1px solid var(--plateado);
+    border-radius: 15px;
+    color: var(--plateado);
+    padding: 0px 10px;
 
+    transition: width .5s ease;
+}
+.Formulario-input:focus{
+    width: 90%;
+}
+.Formulario-input::placeholder{
+    color: var(--plateado);
+}
+.Formulario-radio{
+    display: flex ;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: start;
+    gap: 10px;
+}
+.Formulario-enviar{
+    margin: 20px auto;
+    padding: 15px;
+    background-color: var(--principal);
+    border-radius: 15px;
+    border: 3px solid var(--negro);
+    color: var(--negro);
+
+    transition: all .5s ease;
+}
+.Formulario-enviar:hover{
+    background-color: var(--negro);
+    border: 3px solid var(--principal);
+    color: var(--principal);
+}
 .Footer{
     width: 100%;
     background-color: var(--negro);
@@ -274,15 +316,5 @@ h1 , h2 , h3 , h4 , h5 , h6{
     }
     .Main-section{
         width: 100%;
-    }
-    .Acordeon-p.Activo{
-        height: 10rem;
-    }
-    .Acordeon-pregunta{
-        margin: 10px 0px;
-    }
-    .Acordeon-h4{
-        margin: 10px 0rem;
-        font-size: 1.4rem;
     }
 }

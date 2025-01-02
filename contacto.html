@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coordenadas y Latitudes</title>
-    <script src="js/sobrenosotros.js" defer></script>
-    <link rel="stylesheet" href="css/sobrenosotros.css">
+    <script src="js/contacto.js" defer></script>
+    <link rel="stylesheet" href="css/contacto.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Grenze:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -382,45 +382,39 @@
               </svg>
         </div>
         <section class="Main-section">
-            <h2 class="Main-h2">Sobre nosotros</h2>
+            <h2 class="Main-h2">Contacto</h2>
             <p class="Main-p">
-                Coordenadas y Latitudes es una empesa dedicada a la fabricación y venta de mapas en alta calidad. Desde 1987 llevamos vendiendo mapas con el mismo entusiasmo que el primer día y con una sonrisa. 
+            Rellena el siguiente formulario y dejanos tus comentarios, sugerencias, recomendaciones...
             </p>
-            <p class="Main-p">Entre nuestros mapas se encuentran mapas para uso escolar o mapas decorativos para los entusiastas de la cartografía.</p>
-            <p class="Main-p">Actualmente realizamos envios a:</p>
-            <ul class="Main-ul">
-                <li class="Main-li">Peninsula Iberica</li>
-                <li class="Main-li">Canarias (con costo añadido)</li>
-                <li class="Main-li">Baleares</li>
-                <li class="Main-li">Latinoamerica (consultar paises en Preguntas frecuentes)</li>
-                <li class="Main-li">Unión Europea</li>
-            </ul>
-            <p class="Main-p">Para mas información consulta el apartado de Preguntas Frecuentes</p>
         </section>
         <section class="Main-section">
-            <h3 class="Main-h3">Preguntas Frecuentes</h3>
-            <div class="Main-acordeon Acordeon">
-                <div class="Acordeon-pregunta">
-                    <h4 class="Acordeon-h4">¿Cuánto miden los mapas?</h4>
-                    <p class="Acordeon-p">Nuestro mapas pueden pedirse en medidas de 90x150,30x50 y 60x100.</p>
+          <h3 class="Main-h3">Formulario de contacto</h3>
+            <form action="contacto.html" method="post" class="Main-form Formulario">
+              <fieldset class="Formulario-fieldset">
+                <label for="nombre" class="Formulario-label">Nombre</label>
+                <input required type="text" name="nombre" id="nombre" placeholder="Escriba su nombre" class="Formulario-input">
+              </fieldset>
+              <fieldset class="Formulario-fieldset">
+                <label for="correo" class="Formulario-label">Correo electronico</label>
+                <input required type="email" name="correo" id="correo" placeholder="Escriba su correo electronico" class="Formulario-input">
+              </fieldset>
+              <fieldset class="Formulario-fieldset">
+                <legend class="Formulario-legend">Seleccione el tipo de mensaje</legend>
+                <div class="Formulario-radio">
+                  <label for="queja" class="Formulario-label">Queja</label>
+                  <input type="radio" name="tipomensaje" id="queja">
+                  <label for="sugerencia" class="Formulario-label">Sugerencia</label>
+                  <input type="radio" name="tipomensaje" id="sugerencia">
+                  <label for="otro" class="Formulario-label">Otro</label>
+                  <input type="radio" name="tipomensaje" id="otro">
                 </div>
-                <div class="Acordeon-pregunta">
-                    <h4 class="Acordeon-h4">¿Cuánto tarda en llegar el mapa a mi casa?</h4>
-                    <p class="Acordeon-p">El tiempo de envío estimado es de 5 dias laborables, 7 dias en caso de Baleares y Canarias. Para Latinoamerica depende del país.</p>
-                </div>
-                <div class="Acordeon-pregunta">
-                    <h4 class="Acordeon-h4">¿A qué paises de Latinoamerica realizais envios?</h4>
-                    <p class="Acordeon-p">Realizamos envios a Argentina, Chile, Uruguay, Paraguay y Colombia. Tenemos previsto realizar también envios a Ecuador en 2025.</p>
-                </div>
-                <div class="Acordeon-pregunta">
-                    <h4 class="Acordeon-h4">¿Puedo pedir otro mapa si se me rompe el mío?</h4>
-                    <p class="Acordeon-p">Si el mapa es dañado durante el envío, enviaremos otro libre de gastos. Si el mapa se rompe por un manejo indebido, el cliente deberá adquirir uno nuevo</p>
-                </div>
-                <div class="Acordeon-pregunta">
-                    <h4 class="Acordeon-h4">¿Añadireís más mapas?</h4>
-                    <p class="Acordeon-p">Tenemos previsto añadir en el ultimo trimestre de 2025 mapas de Africa, Asia y America</p>
-                </div>
-            </div>
+              </fieldset>
+              <fieldset class="Formulario-fieldset">
+                <label for="mensaje" class="Formulario-label">Mensaje</label>
+                <input type="text" name="mensaje" id="mensaje" placeholder="Escriba su mensaje" class="Formulario-input">
+              </fieldset>
+              <button class="Formulario-enviar"> Enviar</button>
+            </form>
         </section>
     </main>
     <footer class="Footer">

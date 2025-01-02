@@ -33,12 +33,12 @@ svg {
 :root {
     font-size: 100%;
     scroll-behavior: smooth;
-    --fondo: rgb(82, 74, 49);
-    --principal: rgb(204, 154, 3);
-    --claro: rgb(131, 116, 73);
+    --fondo: rgb(48, 44, 32);
+    --principal: rgb(233, 177, 9);
+    --claro: rgb(122, 109, 69);
     --blanco: rgb(255, 255, 255);
     --negro: rgb(22, 22, 22);
-    --plateado: rgb(204, 204, 204);
+    --plateado: rgb(223, 223, 223);
     font-family: "Grenze", serif;
 
 
@@ -103,7 +103,7 @@ button {
 }
 
 .Header-a {
-    padding: 10px;
+    padding: 15px;
     color: var(--negro);
     font-size: 1.2rem;
     transition: background-color .3s ease;
@@ -256,7 +256,7 @@ button {
 
 .Cesta-nombre {
     text-transform: uppercase;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 600;
 }
 
@@ -287,7 +287,7 @@ button {
     border: 3px solid var(--claro);
     position: absolute;
     top: calc(50% - 15px);
-    left: calc(50% - 40px);
+    left: calc(50%);
 
 }
 
@@ -354,8 +354,8 @@ button {
 }
 .Main-p {
     padding: 0px 25px;
-    font-size: 1.5rem;
-    font-weight: 300;
+    text-align: start;
+    font-size: 1.3rem;
 }
 
 .Filtro {
@@ -497,6 +497,43 @@ button {
         font-weight: 600;
         font-size: 2.2rem;
     }
+    .Cesta-wrap{
+        width: 90%;
+        top: calc(50% - (500px / 2));
+        left:calc(5%);
+        padding: 10px;
+    }
+    .Cesta-ul{
+        width: 100%;
+    }
+    .Cesta-li {
+        padding: 5px 15px;
+        width: 100%;
+        min-height: 30px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+        border-bottom: 3px solid var(--claro);
+    }
+    .Cesta-nombre{
+        font-size: 1.2rem;
+    }
+    .Cesta-precio{
+        font-size: 1.3rem;
+    }
+    
+    .Cesta-borrar {
+        padding: 2px;
+        background-color: var(--principal);
+        border: 3px solid var(--claro);
+        position: static;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+    }
 }
 @media (max-width:600px){
 
@@ -600,43 +637,7 @@ button {
     .Cesta-svg {
         width: 30px;
     }
-    .Cesta-wrap{
-        width: 90%;
-        top: calc(50% - (500px / 2));
-        left:calc(5%);
-        padding: 10px;
-    }
-    .Cesta-ul{
-        width: 100%;
-    }
-    .Cesta-li {
-        padding: 5px 15px;
-        width: 100%;
-        min-height: 30px;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-around;
-        align-items: center;
-        position: relative;
-        border-bottom: 3px solid var(--claro);
-    }
-    .Cesta-nombre{
-        font-size: 1.2rem;
-    }
-    .Cesta-precio{
-        font-size: 1.3rem;
-    }
-    
-    .Cesta-borrar {
-        padding: 2px;
-        background-color: var(--principal);
-        border: 3px solid var(--claro);
-        position: static;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: center;
-        align-items: center;
-    }
+
     .Mapas{
         width: 100%;
         flex-flow: row wrap;
