@@ -284,7 +284,9 @@ button {
     width: 80px;
     height: 30px;
     background-color: var(--principal);
-    border: 3px solid var(--claro);
+    border: 2px solid var(--negro);
+    border-radius: 15px;
+    color: var(--negro);
     position: absolute;
     top: calc(50% - 15px);
     left: calc(50%);
@@ -293,7 +295,7 @@ button {
 
 .Total-nombre {
     text-transform: uppercase;
-    color: var(--blanco);
+    color: var(--negro);
     font-size: 1.5rem;
     font-weight: 600;
 }
