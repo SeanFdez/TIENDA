@@ -319,7 +319,7 @@ h6 {
     color: var(--plateado);
 }
 
-@media (max-width:600px) {
+@media (max-width: 600px){
 
     .Header {
         min-height: 50px;
@@ -401,7 +401,7 @@ h6 {
         font-size: 35.2px;
     }
     .Carrousel-articulo {
-        min-width: 100%;
+        width: 100%;
     }
 
     .Carrousel-articulo {
