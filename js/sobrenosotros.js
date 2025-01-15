@@ -14,7 +14,7 @@ let menuHandler = ()=>{
 
 //ACORDEON
 let acordeonHandler = (_,i)=>{
-      pregunta[i].addEventListener(`click`, ()=>{           //Por cada click a Pregunta, la respuesta se despliega o se cierra en caso de ya estar desplegada.
+      pregunta[i].addEventListener(`click`, ()=>{ 
             respuesta[i].classList.toggle(`Activo`)
       })
 }
