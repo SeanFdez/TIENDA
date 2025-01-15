@@ -319,7 +319,7 @@ h6 {
     color: var(--plateado);
 }
 
-@media (max-width:37.5rem) {
+@media (max-width:500px) {
 
     .Header {
         min-height: 50px;
