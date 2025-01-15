@@ -235,7 +235,7 @@ button {
     align-items: center;
     color: var(--plateado);
 }
-@media(max-width:48rem){
+@media(max-width:768px){
     .Main-h2{
         width: 100%;
         font-weight: 600;
@@ -246,7 +246,7 @@ button {
         margin: auto;
     }
 }
-@media (max-width:37.5rem){
+@media (max-width:600px){
 
     .Header{
         min-height: 3.125rem;
