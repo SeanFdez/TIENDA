@@ -68,7 +68,7 @@ h1 , h2 , h3 , h4 , h5 , h6{
     max-width: 31.25rem;
 }
 .Header-h1{
-    max-width: 120px;
+    max-width: 7.5rem;
 }
 .Header-ul {
     display: flex;
@@ -78,9 +78,9 @@ h1 , h2 , h3 , h4 , h5 , h6{
 }
 
 .Header-a {
-    padding: 15px;
+    padding: .9375rem;
     color: var(--negro);
-    font-size: 19.2px;
+    font-size: 1.2rem;
     transition: background-color .3s ease;
 }
 
@@ -159,10 +159,10 @@ h1 , h2 , h3 , h4 , h5 , h6{
     color: var(--principal);
 }
 .Acordeon-pregunta{
-    margin: 1.25rem 0px;
+    margin: 1.25rem 0rem;
 }
 .Acordeon-h4{
-    padding: 10px;
+    padding: .625rem;
     margin: .625rem 0rem;
     font-size: 1.6rem;
     text-align: center;
@@ -193,7 +193,7 @@ h1 , h2 , h3 , h4 , h5 , h6{
     align-items: center;
     color: var(--plateado);
 }
-@media(max-width:48rem){
+@media(max-width:768px){
     .Main-h2{
         width: 100%;
         font-weight: 600;
@@ -204,7 +204,7 @@ h1 , h2 , h3 , h4 , h5 , h6{
         margin: auto;
     }
 }
-@media (max-width:37.5rem){
+@media (max-width:600px){
 
     .Header{
         min-height: 3.125rem;
@@ -279,10 +279,10 @@ h1 , h2 , h3 , h4 , h5 , h6{
         height: 10rem;
     }
     .Acordeon-pregunta{
-        margin: 10px 0px;
+        margin: .625rem 0rem;
     }
     .Acordeon-h4{
-        margin: 10px 0rem;
+        margin: .625rem 0rem;
         font-size: 1.4rem;
     }
 }

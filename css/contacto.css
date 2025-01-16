@@ -79,7 +79,7 @@ button {
     max-width: 31.25rem;
 }
 .Header-h1{
-    max-width: 120px;
+    max-width: 7.5rem;
 }
 .Header-ul {
     display: flex;
@@ -89,9 +89,9 @@ button {
 }
 
 .Header-a {
-    padding: 15px;
+    padding: .9375rem;
     color: var(--negro);
-    font-size: 19.2px;
+    font-size: 1.2rem;
     transition: background-color .3s ease;
 }
 
@@ -161,13 +161,13 @@ button {
 }
 .Main-form{
     width: 90%;
-    max-width: 600px;
-    min-height: 500px;
-    margin: 20px auto;
+    max-width: 37.5rem;
+    min-height: 31.25rem;
+    margin: 1.25rem auto;
     background-color: var(--claro);
     background-color: var(--claro);
-    border: 3px solid var(--principal);
-    border-radius: 15px;
+    border: .1875rem solid var(--principal);
+    border-radius: .9375rem;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
@@ -175,12 +175,12 @@ button {
 }
 .Formulario-fieldset{
     width: 90%;
-    padding: 15px;
+    padding: .9375rem;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: start;
-    gap: 10px;
+    gap: .625rem;
 }
 .Formulario-label{
     font-size: 1.2rem;
@@ -191,10 +191,10 @@ button {
 }
 .Formulario-input{
     width: 60%;
-    border: 1px solid var(--plateado);
-    border-radius: 15px;
+    border: .0625rem solid var(--plateado);
+    border-radius: .9375rem;
     color: var(--plateado);
-    padding: 0px 10px;
+    padding: 0rem .625rem;
 
     transition: width .5s ease;
 }
@@ -209,21 +209,21 @@ button {
     flex-flow: column nowrap;
     justify-content: space-between;
     align-items: start;
-    gap: 10px;
+    gap: .625rem;
 }
 .Formulario-enviar{
-    margin: 20px auto;
-    padding: 15px;
+    margin: 1.25rem auto;
+    padding: .9375rem;
     background-color: var(--principal);
-    border-radius: 15px;
-    border: 3px solid var(--negro);
+    border-radius: .9375rem;
+    border: .1875rem solid var(--negro);
     color: var(--negro);
 
     transition: all .5s ease;
 }
 .Formulario-enviar:hover{
     background-color: var(--negro);
-    border: 3px solid var(--principal);
+    border: .1875rem solid var(--principal);
     color: var(--principal);
 }
 .Footer{
