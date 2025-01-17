@@ -121,7 +121,7 @@ button {
     display: none;
 }
 
-
+/* Aqui va la cesta */
 .Cesta {
     width: 50%;
     max-width: 12.5rem;
@@ -164,7 +164,7 @@ button {
     background-color: var(--principal);
     border-radius: .625rem;
 }
-
+/* Esta es la cesta cuando haces click */
 .Cesta-wrap {
     width: 80%;
     min-height: 31.25rem;
@@ -222,7 +222,7 @@ button {
     align-items: start;
 
 }
-
+/* Esta es la barra de scroll de la cesta cuando hay varios articulos en ella */
 .Cesta-ul::-webkit-scrollbar {
     width: .625rem;
 }
@@ -279,7 +279,7 @@ button {
     align-items: center;
 
 }
-
+/* Este es el boton de borrar */
 .Cesta-borrar {
     width: 5rem;
     height: 1.875rem;
@@ -292,7 +292,7 @@ button {
     left: calc(50%);
 
 }
-
+/* Aqui va el total de la cesta */
 .Total-nombre {
     text-transform: uppercase;
     color: var(--negro);
@@ -359,7 +359,7 @@ button {
     text-align: start;
     font-size: 1.3rem;
 }
-
+/* Aqui van los filtros ordenados */
 .Filtro {
     width: 50%;
     max-width: 12.5rem;
@@ -386,7 +386,7 @@ button {
     align-items: start;
 
 }
-
+/* Estas son las propiedades de cada articulo */
 .Articulo {
     width: 80%;
     display: grid;
@@ -429,6 +429,7 @@ button {
     background-color: var(--plateado);
     color: var(--negro);
 }
+/* Las propiedades del lightbox */
 .Lightbox{
     position: fixed;
     background-color: var(--fondo);
@@ -448,7 +449,7 @@ button {
     opacity: 0;
     pointer-events: none;
     
-    transition: all .5s ease;
+    transition: opacity .5s ease;
 }
 .Lightbox.Activo{
     opacity: 1;
@@ -575,7 +576,7 @@ button {
         justify-content: space-evenly;
         align-items: center;
 
-        transition: all .5s ease;
+        transition: height .5s ease;
 
     }
     .Boton-ul.Activo{

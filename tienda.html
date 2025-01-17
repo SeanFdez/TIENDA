@@ -18,6 +18,7 @@
 </head>
 
 <body>
+  <!-- Aqui va el header -->
   <header class="Header">
     <div class="Header-wrap">
       <h1 class="Header-h1 Logo">
@@ -44,6 +45,7 @@
           <li class="Boton-li"><a href="contacto.html" class="Boton-a">Contacto</a></li>
         </ul>
       </div>
+      <!-- Dentro del header va el boton de la cesta y todo lo que contiene la cesta. -->
       <div class="Header-cesta Cesta">
         <button class="Cesta-button">
           <span class="Cesta-span">Cesta</span>
@@ -52,6 +54,7 @@
             <path
               d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4z" />
           </svg>
+          <!-- Este numero marca los items que hay en la cesta -->
           <span class="Cesta-items">0</span>
         </button>
         <div class="Cesta-wrap">
@@ -62,9 +65,11 @@
                 d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
             </svg>
           </div>
+          <!-- Aqui añadiremos los elementos a la cesta mediante JavaScript -->
           <ul class="Cesta-ul">
           </ul>
           <div class="Cesta-total Total">
+            <!-- Aqui sale el precio total -->
             <span class="Total-nombre">PRECIO TOTAL</span>
             <span class="Total-precio"></span>
           </div>
@@ -581,6 +586,7 @@
     <p class="Main-p">Haz click en los mapas para verlos en grande</p>
     <div class="Mapas">
       <div class="Mapas-filtros Filtro">
+        <!-- Aqui están los diferentes filtros para filtrar los mapas, el filtro es mediante JS -->
         <fieldset class="Filtro-fieldset Tipo">
           <legend class="Filtro-legend">Tipo de mapa</legend>
           <div class="Filtro-wrap">
@@ -615,10 +621,12 @@
           </div>
         </fieldset>
       </div>
+      <!-- Añadimos los mapas mediante JS a la lista -->
       <div class="Mapas-articulos Articulo">
 
       </div>
     </div>
+    <!-- Aqui va el lightbox para hacer click en cada mapa y verlo en grande -->
     <div class="Lightbox">
       <button class="Lightbox-button">
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="Lightbox-svg"

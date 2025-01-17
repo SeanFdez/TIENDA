@@ -285,7 +285,7 @@ button {
         justify-content: space-evenly;
         align-items: center;
 
-        transition: all .5s ease;
+        transition: height .5s ease;
 
     }
     .Boton-ul.Activo{
